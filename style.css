@@ -1,0 +1,13 @@
+#output{
+    min-height: 69vh;
+    width: 100%;
+    overflow: scroll;
+}
+#addTask{
+    width: 100%;
+    border-radius: 5px;
+}
+button{
+    border-radius: 5px;
+    border: none;
+}
