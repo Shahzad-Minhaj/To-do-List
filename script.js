@@ -12,7 +12,7 @@ function addButton() {
   updateOutput();
 
   document.getElementById("deletebutton").onclick = function(){
-    document.getElementById("output").innerHTML= x.pop()
+    document.getElementById("output").innerHTML= x
   }
 }
 
