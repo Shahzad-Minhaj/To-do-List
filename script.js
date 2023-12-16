@@ -35,7 +35,7 @@ document.getElementById("btn").onclick= function(){
   tasks.push(y);
   inputElement.value = ""; // Clear the input field after pushing the value
   
-  document.getElementById("output").innerHTML += `<ul><li>${tasks[loop]} <button id="deletebutton" style="margin-left: 20px;">Delete</button></li></ul>`
+  document.getElementById("output").innerHTML += `<ul style = "margin: 15px"><li>${tasks[loop]} <button id="deletebutton" style="margin-left: 20px;">Delete</button></li></ul>`
   loop++ 
   
   document.getElementById("deletebutton").onclick = function(){
@@ -51,6 +51,11 @@ let i=0;
 document.getElementById("marksBtn").onclick=function(){
 
   let y = document.getElementById("addStudentMarks")
+  // console.log(typeof(y.value))
+  let f = Number(y.value)
+  console.log(typeof(f))
+  if(f == "string"){ alert("please enter Marks")}
+  // else
   x.push(y.value)
   y.value= "";
   
