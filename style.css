@@ -1,13 +1,18 @@
-#output{
-    min-height: 69vh;
+#output , #output2{
+    height: 200px;
     width: 100%;
     overflow: scroll;
 }
-#addTask{
+
+#addTask, #addStudentMarks{
     width: 100%;
     border-radius: 5px;
 }
 button{
     border-radius: 5px;
     border: none;
+}
+h1{
+    background-color: black;
+    color: white;
 }
