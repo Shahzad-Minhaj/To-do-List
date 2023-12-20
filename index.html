@@ -17,14 +17,18 @@
 
   <div class="row py-2">
 <div class="col-2"></div>
-    <div class="col-8"><input type="text" id="addTask" placeholder="Add Task"></div>
-    <div class="col-2"> <button id="btn">Add Task</button></div>
+    <div class="col-8"><input type="text" class="add" placeholder="Add Task"></div>
+    <div class="col-2"> <button class="addButtons">Add Task</button></div>
   
   </div>
   <div class="row">
     <div class="col-2 my-2"></div>
-    <div class="col-8 my-2 bg-white"><div id="output"></div></div>
+    <div class="col-8 my-2 bg-white"><div class="output"></div></div>
     <div class="col-2"></div>
+    <div class="row">
+      <div class="col text-center"><button class="delStart">Delete from start</button>
+        <button class="delEnd">Delete from end</button></div>
+    </div>
   </div></div>
 
   <!-- Checking Student marks (Optional Assignment) -->
@@ -62,5 +66,6 @@
 </div>
 <!-- End of .container -->
   <script src="/script.js"></script>
+  <!-- todolistnmarks.surge.sh -->
 </body>
 </html>

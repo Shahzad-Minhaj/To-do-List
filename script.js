@@ -1,47 +1,59 @@
-//======================(original code for to-dolist)==============================
-// let tasks = [];
 
-// document.getElementById("btn").onclick = function() {
-//   let inputElement = document.getElementById("addTask");
-//   let y = String(inputElement.value);
+let memory = [];
 
- 
+document.querySelector(".addButtons").addEventListener("click", function(event) {
+    if (event.target.classList.contains("bstn")) {
+        // Handle button click
+        let buttonIndex = Array.from(event.target.parentNode.children).indexOf(event.target);
+        memory.splice(buttonIndex, 1);
+        updateOutput();
+    } else {
+        // Handle add button click
+        let input = document.querySelector(".add");
+        let insertingY = String(input.value);
 
-//   tasks.push(y);
-//   inputElement.value = ""; // Clear the input field after pushing the value
-//   updateOutput();
+        if (insertingY === "") {
+            alert("Please enter something");
+            return;
+        }
 
-//   document.getElementById("deletebutton").onclick = function(){
-//     document.getElementById("output").innerHTML= tasks
-//   }
-// }
+        memory.push(insertingY);
+        input.value = "";
+        updateOutput();
+    }
+});
 
-// function updateOutput() {
-//     for(let i=0;i<x.length;i++){
-//   document.getElementById("output").innerHTML = ` ${i+1}: ` + tasks[i]+ '<button id="deletebutton" style="margin-left: 20px;">Delete</button>';
-    
-// }
-// }
-//========================(practice for to do list)=============
-let tasks = [];
-let loop=0;
+document.querySelector(".delEnd").addEventListener("click", function() {
+    if (memory.length > 0) {
+        memory.pop();
+        updateOutput();
+    } else {
+        console.log("Array is empty");
+    }
+});
 
-document.getElementById("btn").onclick= function(){
-  let inputElement = document.getElementById("addTask");
-  let y = String(inputElement.value);
+document.querySelector(".delStart").addEventListener("click", function() {
+    if (memory.length > 0) {
+        memory.shift();
+        updateOutput();
+    } else {
+        console.log("Array is empty");
+    }
+});
 
- 
+function updateOutput() {
+    let output = document.querySelector(".output");
+    output.innerHTML = memory
+        .map(item => `${item}<button class="bstn" style="margin-left: 10px">Remove</button>`)
+        .join("<br>");
 
-  tasks.push(y);
-  inputElement.value = ""; // Clear the input field after pushing the value
-  
-  document.getElementById("output").innerHTML += `<ul style = "margin: 15px"><li>${tasks[loop]} <button id="deletebutton" style="margin-left: 20px;">Delete</button></li></ul>`
-  loop++ 
-  
-  document.getElementById("deletebutton").onclick = function(){
-    document.getElementById("output").innerHTML = ""
-  }
-  
+    let buttons = output.querySelectorAll(".bstn");
+    buttons.forEach((button, index) => {
+        button.addEventListener("click", function() {
+            memory.splice(index, 1);
+            updateOutput();
+        });
+    });
 }
 
 //===================================(practice)======================
@@ -51,10 +63,8 @@ let i=0;
 document.getElementById("marksBtn").onclick=function(){
 
   let y = document.getElementById("addStudentMarks")
-  // console.log(typeof(y.value))
-  let f = Number(y.value)
-  console.log(typeof(f))
-  if(f == "string"){ alert("please enter Marks")}
+  console.log
+  // if(typeof(y.value) == "string"){ alert("please enter Marks")}
   // else
   x.push(y.value)
   y.value= "";
