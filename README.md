@@ -8,8 +8,7 @@ Table of Contents
     Getting Started
     Dependencies
     Contributing
-    License
-    Acknowledgments
+    
 
 # Features
 
