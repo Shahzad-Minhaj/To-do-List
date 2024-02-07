@@ -1,71 +1,103 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>To-Do List</title>
   <link rel="stylesheet" href="bootstrap.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
-  <header><div class="container-fluid bg-secondary py-2"><h1 class="text-center">My To-Do List</h1></div></header>
-<main>
-  <div class="container-fluid bg-secondary">
 
-    <!-- To-Do List (Important Assignment)-->
-
-  <div class="row py-2">
-<div class="col-2"></div>
-    <div class="col-8"><input type="text" class="add" placeholder="Add Task"></div>
-    <div class="col-2"> <button class="addButtons">Add Task</button></div>
-  
-  </div>
-  <div class="row">
-    <div class="col-2 my-2"></div>
-    <div class="col-8 my-2 bg-white"><div class="output"></div></div>
-    <div class="col-2"></div>
-    <div class="row">
-      <div class="col text-center"><button class="delStart">Delete from start</button>
-        <button class="delEnd">Delete from end</button></div>
+  <header>
+    <div class="container-fluid py-2">
+      <h1 class="text-center">My To-Do List</h1>
     </div>
-  </div></div>
+  </header>
+  <main>
+    <div class="container-fluid ">
 
-  <!-- Checking Student marks (Optional Assignment) -->
-  <div class="container-fluid bg-secondary py-4">
-    <div class="row">
-      <div class="col">
-        <h1 class="text-center">Checking Marks</h1>
+      <!-- To-Do List (Important Assignment)-->
+
+      <div class="row py-2">
+        <div class="col-2"></div>
+        <div class="col-8 p-0"><input type="text" class="add" placeholder="Add Task"></div>
+        <div class="col-2"> <button class="addButtons btn btn-outline-warning">Add Task</button></div>
+
+      </div>
+      <div class="row">
+        <div class="col-2 my-2 "></div>
+        <div class="col-8 my-2 border rounded p-0 bg-white">
+          <div class="output"></div>
+        </div>
+        <div class="col-2"></div>
+        <div class="row">
+          <div class="col text-center"><button class="delStart btn btn-outline-warning">Delete from start</button>
+            <button class="delEnd btn btn-outline-warning">Delete from end</button>
+          </div>
+        </div>
       </div>
     </div>
-    <div  class="row">
-      <div class="col-2"></div>
-      <div class="col-8"><input type="text" id="addStudentMarks" placeholder="Add Student Marks"></div>
-      <div class="col-2"> <button id="marksBtn">Add Marks</button></div>
+
+    <!-- Checking Student marks (Optional Assignment) -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col">
+          <h1 class="text-center">Checking Marks</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8 p-0"><input type="text" class="addStudentMarks" placeholder="Add Student Marks"></div>
+        <div class="col-2"> <button id="marksBtn" class=" btn btn-outline-warning">Add Marks</button></div>
+      </div>
+      <div class="row">
+        <div class="col-2 my-2"></div>
+        <div class="col-8 my-2 border rounded p-0 bg-white">
+          <div class="output2"></div>
+        </div>
+        <div class="col-2"></div>
+      </div>
+
     </div>
-    <div class="row">
-      <div class="col-2 my-2"></div>
-      <div class="col-8 my-2 bg-white"><div id="output2"></div></div>
-      <div class="col-2"></div>
-    </div>
-  
-  </div>
 
 
-  
+
   </main>
-<div class="container-fluid bg-secondary">
+  <footer class="container-fluid">
+    <div class="footer-content">
+      <div class="contact-info">
+        <p>Contact us:</p>
+        <p><a href="mailto:sminhaj.suit@gmail.com">sminhaj.suit@gmail.com</a></p>
+        <p><a href="tel:+923039319903">+92 303 9319903</a></p>
+      </div>
 
-  <footer class="text-center text-white" style="background-color: black;">
-    <div class="text-center p-3" style="background-color: black;">
-      © 2023 Copyright: Prepared By Shahzad Minhaj - SMIT
+      <div class="social-links">
+        <p>Follow us:</p>
+        <div class="social-media-buttons"><button class="social-media-button"><a href="https://x.com/MinhajShahzad06?t=VqT-OU7x1IsRAUkSpMrG6w&s=08" target="_blank"
+              title="Twitter"><i class="fab fa-twitter"></i></a></button>
+          <button class="social-media-button"><a href="https://www.linkedin.com/in/shahzad-minhaj/" target="_blank"
+              title="LinkedIn"><i class="fab fa-linkedin"></i></a></button>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">About Us</a>
+      </div>
     </div>
-    <!-- Copyright -->
+
+    <div class="copyright">
+      <p>&copy; 2024 Shahzad Minhaj - SMIT, Peshawar. All rights reserved.</p>
+    </div>
   </footer>
 
-</div>
-<!-- End of .container -->
   <script src="/script.js"></script>
   <!-- todolistnmarks.surge.sh -->
 </body>
+
 </html>
